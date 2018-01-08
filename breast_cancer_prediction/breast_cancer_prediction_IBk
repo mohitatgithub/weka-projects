@@ -1,0 +1,28 @@
+=== Evaluation result ===
+
+Scheme: IBk
+Options: -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation: breast-cancer
+
+
+Correctly Classified Instances         186               96.3731 %
+Incorrectly Classified Instances         7                3.6269 %
+Kappa statistic                          0.9227
+Mean absolute error                      0.0387
+Root mean squared error                  0.19  
+Relative absolute error                  8.2537 %
+Root relative squared error             39.0483 %
+Total Number of Instances              193     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.932    0.017    0.972      0.932    0.952      0.923    0.958     0.932     M
+                 0.983    0.068    0.959      0.983    0.971      0.923    0.958     0.953     B
+Weighted Avg.    0.964    0.048    0.964      0.964    0.964      0.923    0.958     0.945     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  69   5 |   a = M
+   2 117 |   b = B

@@ -1,0 +1,27 @@
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: breast-cancer
+
+
+Correctly Classified Instances         176               91.1917 %
+Incorrectly Classified Instances        17                8.8083 %
+Kappa statistic                          0.8142
+Mean absolute error                      0.0881
+Root mean squared error                  0.2965
+Relative absolute error                 18.7762 %
+Root relative squared error             60.9401 %
+Total Number of Instances              193     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.892    0.076    0.880      0.892    0.886      0.814    0.962     0.928     M
+                 0.924    0.108    0.932      0.924    0.928      0.814    0.965     0.970     B
+Weighted Avg.    0.912    0.096    0.912      0.912    0.912      0.814    0.964     0.954     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  66   8 |   a = M
+   9 110 |   b = B
