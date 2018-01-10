@@ -1,5 +1,5 @@
 {
-	"flow_name" : "brest_cancer_prediction_multimodel",
+	"flow_name" : "breast_cancer_prediction_multimodel",
 	"steps" : [
 		{
 			"class" : "weka.knowledgeflow.steps.Loader",
@@ -106,15 +106,15 @@
 					"NaiveBayes",
 					"J48",
 					"Logistic",
-					"AdaBoostM1",
-					"IBk"
+					"IBk",
+					"SMO"
 				],
 				"testSet" : [
 					"NaiveBayes",
 					"J48",
 					"Logistic",
-					"AdaBoostM1",
-					"IBk"
+					"IBk",
+					"SMO"
 				]
 			},
 			"coordinates" : "480,0"
@@ -173,6 +173,9 @@
 				"name" : "TextViewer"
 			},
 			"connections" : {
+				"text" : [
+					"TextSaver"
+				]
 			},
 			"coordinates" : "480,480"
 		},
@@ -197,26 +200,6 @@
 			"coordinates" : "840,160"
 		},
 		{
-			"class" : "weka.knowledgeflow.steps.Classifier",
-			"properties" : {
-				"classifier" : {
-					"type" : "optionHandler",
-					"class" : "weka.classifiers.meta.AdaBoostM1",
-					"options" : "-P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump"
-				},
-				"loadClassifierFileName" : "",
-				"name" : "AdaBoostM1",
-				"resetIncrementalClassifier" : false,
-				"updateIncrementalClassifier" : true
-			},
-			"connections" : {
-				"batchClassifier" : [
-					"ClassifierPerformanceEvaluator4"
-				]
-			},
-			"coordinates" : "120,160"
-		},
-		{
 			"class" : "weka.knowledgeflow.steps.ClassifierPerformanceEvaluator",
 			"properties" : {
 				"costMatrixString" : "",
@@ -228,6 +211,9 @@
 			"connections" : {
 				"text" : [
 					"TextViewer"
+				],
+				"thresholdData" : [
+					"ModelPerformanceChart"
 				]
 			},
 			"coordinates" : "120,320"
@@ -247,6 +233,81 @@
 				]
 			},
 			"coordinates" : "840,320"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Classifier",
+			"properties" : {
+				"classifier" : {
+					"type" : "optionHandler",
+					"class" : "weka.classifiers.functions.SMO",
+					"options" : "-C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007\" -calibrator \"weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4\""
+				},
+				"loadClassifierFileName" : "",
+				"name" : "SMO",
+				"resetIncrementalClassifier" : false,
+				"updateIncrementalClassifier" : true
+			},
+			"connections" : {
+				"batchClassifier" : [
+					"ClassifierPerformanceEvaluator4"
+				]
+			},
+			"coordinates" : "116,161"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextSaver",
+			"properties" : {
+				"append" : true,
+				"file" : "abc.txt",
+				"name" : "TextSaver",
+				"writeTitleString" : false
+			},
+			"connections" : {
+			},
+			"coordinates" : "727,480"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ModelPerformanceChart",
+			"properties" : {
+				"name" : "ModelPerformanceChart",
+				"offscreenAdditionalOpts" : "",
+				"offscreenHeight" : "400",
+				"offscreenRendererName" : "Weka Chart Renderer",
+				"offscreenWidth" : "500",
+				"offscreenXAxis" : "",
+				"offscreenYAxis" : ""
+			},
+			"connections" : {
+				"image" : [
+					"ImageSaver",
+					"ImageViewer"
+				]
+			},
+			"coordinates" : "120,480"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ImageSaver",
+			"properties" : {
+				"file" : "",
+				"format" : {
+					"type" : "enumHelper",
+					"class" : "weka.knowledgeflow.steps.ImageSaver$ImageFormat",
+					"value" : "DEFAULT"
+				},
+				"name" : "ImageSaver"
+			},
+			"connections" : {
+			},
+			"coordinates" : "320,600"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ImageViewer",
+			"properties" : {
+				"name" : "ImageViewer"
+			},
+			"connections" : {
+			},
+			"coordinates" : "120,640"
 		}
 	]
 }

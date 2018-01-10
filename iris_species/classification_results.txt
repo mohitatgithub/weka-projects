@@ -1,0 +1,476 @@
+=== Evaluation result ===
+
+Scheme: IBk
+Options: -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0399
+Root mean squared error                  0.1747
+Relative absolute error                  8.9763 %
+Root relative squared error             37.0695 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.940    0.040    0.922      0.940    0.931      0.896    0.952     0.887     Iris-versicolor
+                 0.920    0.030    0.939      0.920    0.929      0.895    0.947     0.894     Iris-virginica
+Weighted Avg.    0.953    0.023    0.953      0.953    0.953      0.930    0.966     0.927     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0342
+Root mean squared error                  0.155 
+Relative absolute error                  7.6997 %
+Root relative squared error             32.8794 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.992     0.983     Iris-versicolor
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.992     0.986     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.994     0.989     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 48  2 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0287
+Root mean squared error                  0.1424
+Relative absolute error                  6.456  %
+Root relative squared error             30.2139 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.970     0.933     Iris-versicolor
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.975     0.933     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.982     0.955     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 46  4 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.035 
+Root mean squared error                  0.1586
+Relative absolute error                  7.8705 %
+Root relative squared error             33.6353 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.980    0.000    1.000      0.980    0.990      0.985    0.990     0.987     Iris-setosa
+                 0.940    0.030    0.940      0.940    0.940      0.910    0.952     0.880     Iris-versicolor
+                 0.960    0.030    0.941      0.960    0.950      0.925    0.961     0.905     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.968     0.924     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 49  1  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.035 
+Root mean squared error                  0.1586
+Relative absolute error                  7.8705 %
+Root relative squared error             33.6353 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.980    0.000    1.000      0.980    0.990      0.985    0.990     0.987     Iris-setosa
+                 0.940    0.030    0.940      0.940    0.940      0.910    0.952     0.880     Iris-versicolor
+                 0.960    0.030    0.941      0.960    0.950      0.925    0.961     0.905     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.968     0.924     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 49  1  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0342
+Root mean squared error                  0.155 
+Relative absolute error                  7.6997 %
+Root relative squared error             32.8794 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.992     0.983     Iris-versicolor
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.992     0.986     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.994     0.989     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 48  2 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: IBk
+Options: -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0399
+Root mean squared error                  0.1747
+Relative absolute error                  8.9763 %
+Root relative squared error             37.0695 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.940    0.040    0.922      0.940    0.931      0.896    0.952     0.887     Iris-versicolor
+                 0.920    0.030    0.939      0.920    0.929      0.895    0.947     0.894     Iris-virginica
+Weighted Avg.    0.953    0.023    0.953      0.953    0.953      0.930    0.966     0.927     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0287
+Root mean squared error                  0.1424
+Relative absolute error                  6.456  %
+Root relative squared error             30.2139 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.970     0.933     Iris-versicolor
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.975     0.933     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.982     0.955     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 46  4 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: IBk
+Options: -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0399
+Root mean squared error                  0.1747
+Relative absolute error                  8.9763 %
+Root relative squared error             37.0695 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.940    0.040    0.922      0.940    0.931      0.896    0.952     0.887     Iris-versicolor
+                 0.920    0.030    0.939      0.920    0.929      0.895    0.947     0.894     Iris-virginica
+Weighted Avg.    0.953    0.023    0.953      0.953    0.953      0.930    0.966     0.927     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0342
+Root mean squared error                  0.155 
+Relative absolute error                  7.6997 %
+Root relative squared error             32.8794 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.992     0.983     Iris-versicolor
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.992     0.986     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.994     0.989     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 48  2 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.035 
+Root mean squared error                  0.1586
+Relative absolute error                  7.8705 %
+Root relative squared error             33.6353 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.980    0.000    1.000      0.980    0.990      0.985    0.990     0.987     Iris-setosa
+                 0.940    0.030    0.940      0.940    0.940      0.910    0.952     0.880     Iris-versicolor
+                 0.960    0.030    0.941      0.960    0.950      0.925    0.961     0.905     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.968     0.924     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 49  1  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0287
+Root mean squared error                  0.1424
+Relative absolute error                  6.456  %
+Root relative squared error             30.2139 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.970     0.933     Iris-versicolor
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.975     0.933     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.982     0.955     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 46  4 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0342
+Root mean squared error                  0.155 
+Relative absolute error                  7.6997 %
+Root relative squared error             32.8794 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.992     0.983     Iris-versicolor
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.992     0.986     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.994     0.989     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 48  2 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.035 
+Root mean squared error                  0.1586
+Relative absolute error                  7.8705 %
+Root relative squared error             33.6353 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.980    0.000    1.000      0.980    0.990      0.985    0.990     0.987     Iris-setosa
+                 0.940    0.030    0.940      0.940    0.940      0.910    0.952     0.880     Iris-versicolor
+                 0.960    0.030    0.941      0.960    0.950      0.925    0.961     0.905     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.968     0.924     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 49  1  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0287
+Root mean squared error                  0.1424
+Relative absolute error                  6.456  %
+Root relative squared error             30.2139 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.920    0.020    0.958      0.920    0.939      0.910    0.970     0.933     Iris-versicolor
+                 0.960    0.040    0.923      0.960    0.941      0.911    0.975     0.933     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.982     0.955     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 46  4 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+=== Evaluation result ===
+
+Scheme: IBk
+Options: -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation: Iris-weka.filters.unsupervised.attribute.Remove-R1
+
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0399
+Root mean squared error                  0.1747
+Relative absolute error                  8.9763 %
+Root relative squared error             37.0695 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.940    0.040    0.922      0.940    0.931      0.896    0.952     0.887     Iris-versicolor
+                 0.920    0.030    0.939      0.920    0.929      0.895    0.947     0.894     Iris-virginica
+Weighted Avg.    0.953    0.023    0.953      0.953    0.953      0.930    0.966     0.927     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  4 46 |  c = Iris-virginica

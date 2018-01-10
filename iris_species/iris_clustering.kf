@@ -1,0 +1,226 @@
+{
+	"flow_name" : "iris_clustering",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.Loader",
+			"properties" : {
+				"loader" : {
+					"type" : "loader",
+					"class" : "weka.core.converters.CSVLoader",
+					"filePath" : "/media/newhd/Data Science/DataSets/kaggle_datasets/iris-species/Iris.csv",
+					"useRelativePath" : false,
+					"options" : "-M ? -B 100 -E \"\\\",\\'\" -F ,"
+				},
+				"name" : "CSVLoader"
+			},
+			"connections" : {
+				"dataSet" : [
+					"Remove",
+					"AttributeSummarizer",
+					"DataVisualizer2"
+				]
+			},
+			"coordinates" : "40,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Filter",
+			"properties" : {
+				"filter" : {
+					"type" : "optionHandler",
+					"class" : "weka.filters.unsupervised.attribute.Remove",
+					"options" : "-R 1,6"
+				},
+				"name" : "Remove"
+			},
+			"connections" : {
+				"dataSet" : [
+					"TrainingSetMaker"
+				]
+			},
+			"coordinates" : "200,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Clusterer",
+			"properties" : {
+				"clusterer" : {
+					"type" : "optionHandler",
+					"class" : "weka.clusterers.SimpleKMeans",
+					"options" : "-init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A \"weka.core.EuclideanDistance -R first-last\" -I 500 -num-slots 1 -S 10"
+				},
+				"loadClustererFileName" : "",
+				"name" : "SimpleKMeans"
+			},
+			"connections" : {
+				"batchClusterer" : [
+					"ClustererPerformanceEvaluator"
+				]
+			},
+			"coordinates" : "560,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Clusterer",
+			"properties" : {
+				"clusterer" : {
+					"type" : "optionHandler",
+					"class" : "weka.clusterers.EM",
+					"options" : "-I 100 -N 3 -X 10 -max -1 -ll-cv 1.0E-6 -ll-iter 1.0E-6 -M 1.0E-6 -K 10 -num-slots 1 -S 100"
+				},
+				"loadClustererFileName" : "",
+				"name" : "EM"
+			},
+			"connections" : {
+				"batchClusterer" : [
+					"ClustererPerformanceEvaluator2"
+				]
+			},
+			"coordinates" : "560,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Clusterer",
+			"properties" : {
+				"clusterer" : {
+					"type" : "optionHandler",
+					"class" : "weka.clusterers.HierarchicalClusterer",
+					"options" : "-N 3 -L SINGLE -P -A \"weka.core.EuclideanDistance -R first-last\""
+				},
+				"loadClustererFileName" : "",
+				"name" : "HierarchicalClusterer"
+			},
+			"connections" : {
+				"batchClusterer" : [
+					"ClustererPerformanceEvaluator3"
+				]
+			},
+			"coordinates" : "560,360"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ClustererPerformanceEvaluator",
+			"properties" : {
+				"name" : "ClustererPerformanceEvaluator"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "760,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ClustererPerformanceEvaluator",
+			"properties" : {
+				"name" : "ClustererPerformanceEvaluator2"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "760,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ClustererPerformanceEvaluator",
+			"properties" : {
+				"name" : "ClustererPerformanceEvaluator3"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "760,360"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextViewer",
+			"properties" : {
+				"name" : "TextViewer"
+			},
+			"connections" : {
+				"text" : [
+					"TextSaver"
+				]
+			},
+			"coordinates" : "960,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextSaver",
+			"properties" : {
+				"append" : true,
+				"file" : "/media/newhd/Data Science/Git Weka Projects/iris_species/clustering_results.txt",
+				"name" : "TextSaver",
+				"writeTitleString" : false
+			},
+			"connections" : {
+			},
+			"coordinates" : "1120,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TrainingSetMaker",
+			"properties" : {
+				"name" : "TrainingSetMaker"
+			},
+			"connections" : {
+				"trainingSet" : [
+					"SimpleKMeans",
+					"EM",
+					"HierarchicalClusterer",
+					"ScatterPlotMatrix",
+					"DataVisualizer"
+				]
+			},
+			"coordinates" : "360,200"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ScatterPlotMatrix",
+			"properties" : {
+				"name" : "ScatterPlotMatrix"
+			},
+			"connections" : {
+			},
+			"coordinates" : "360,360"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.DataVisualizer",
+			"properties" : {
+				"name" : "DataVisualizer",
+				"offscreenAdditionalOpts" : "",
+				"offscreenHeight" : "400",
+				"offscreenRendererName" : "Weka Chart Renderer",
+				"offscreenWidth" : "500",
+				"offscreenXAxis" : "",
+				"offscreenYAxis" : ""
+			},
+			"connections" : {
+			},
+			"coordinates" : "360,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.AttributeSummarizer",
+			"properties" : {
+				"name" : "AttributeSummarizer",
+				"offscreenAdditionalOpts" : "",
+				"offscreenHeight" : "400",
+				"offscreenRendererName" : "Weka Chart Renderer",
+				"offscreenWidth" : "500",
+				"offscreenXAxis" : ""
+			},
+			"connections" : {
+			},
+			"coordinates" : "40,360"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.DataVisualizer",
+			"properties" : {
+				"name" : "DataVisualizer2",
+				"offscreenAdditionalOpts" : "",
+				"offscreenHeight" : "400",
+				"offscreenRendererName" : "Weka Chart Renderer",
+				"offscreenWidth" : "500",
+				"offscreenXAxis" : "",
+				"offscreenYAxis" : ""
+			},
+			"connections" : {
+			},
+			"coordinates" : "40,40"
+		}
+	]
+}
