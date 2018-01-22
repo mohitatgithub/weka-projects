@@ -1,0 +1,280 @@
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         199               76.2452 %
+Incorrectly Classified Instances        62               23.7548 %
+Kappa statistic                          0.4342
+Mean absolute error                      0.3125
+Root mean squared error                  0.4059
+Relative absolute error                 69.2946 %
+Root relative squared error             86.7189 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.566    0.146    0.644      0.566    0.603      0.436    0.796     0.615     Sick
+                 0.854    0.434    0.809      0.854    0.831      0.436    0.796     0.864     Healthy
+Weighted Avg.    0.762    0.342    0.756      0.762    0.758      0.436    0.796     0.785     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  47  36 |   a = Sick
+  26 152 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         209               80.0766 %
+Incorrectly Classified Instances        52               19.9234 %
+Kappa statistic                          0.519 
+Mean absolute error                      0.298 
+Root mean squared error                  0.374 
+Relative absolute error                 66.0629 %
+Root relative squared error             79.8884 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.602    0.107    0.725      0.602    0.658      0.523    0.855     0.765     Sick
+                 0.893    0.398    0.828      0.893    0.859      0.523    0.855     0.907     Healthy
+Weighted Avg.    0.801    0.305    0.795      0.801    0.795      0.523    0.855     0.862     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  50  33 |   a = Sick
+  19 159 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: Logistic2 : Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         595               77.474  %
+Incorrectly Classified Instances       173               22.526  %
+Kappa statistic                          0.4785
+Mean absolute error                      0.3094
+Root mean squared error                  0.3954
+Relative absolute error                 68.0754 %
+Root relative squared error             82.9561 %
+Total Number of Instances              768     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.571    0.116    0.725      0.571    0.639      0.486    0.832     0.710     Sick
+                 0.884    0.429    0.794      0.884    0.836      0.486    0.832     0.891     Healthy
+Weighted Avg.    0.775    0.320    0.770      0.775    0.767      0.486    0.832     0.828     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 153 115 |   a = Sick
+  58 442 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: J482 : J48
+Options: -C 0.25 -M 2
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         553               72.0052 %
+Incorrectly Classified Instances       215               27.9948 %
+Kappa statistic                          0.3736
+Mean absolute error                      0.3179
+Root mean squared error                  0.4498
+Relative absolute error                 69.9461 %
+Root relative squared error             94.3763 %
+Total Number of Instances              768     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.563    0.196    0.606      0.563    0.584      0.374    0.739     0.568     Sick
+                 0.804    0.437    0.775      0.804    0.789      0.374    0.739     0.790     Healthy
+Weighted Avg.    0.720    0.353    0.716      0.720    0.718      0.374    0.739     0.712     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 151 117 |   a = Sick
+  98 402 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         209               80.0766 %
+Incorrectly Classified Instances        52               19.9234 %
+Kappa statistic                          0.519 
+Mean absolute error                      0.298 
+Root mean squared error                  0.374 
+Relative absolute error                 66.0629 %
+Root relative squared error             79.8884 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.602    0.107    0.725      0.602    0.658      0.523    0.855     0.765     Sick
+                 0.893    0.398    0.828      0.893    0.859      0.523    0.855     0.907     Healthy
+Weighted Avg.    0.801    0.305    0.795      0.801    0.795      0.523    0.855     0.862     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  50  33 |   a = Sick
+  19 159 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         199               76.2452 %
+Incorrectly Classified Instances        62               23.7548 %
+Kappa statistic                          0.4342
+Mean absolute error                      0.3125
+Root mean squared error                  0.4059
+Relative absolute error                 69.2946 %
+Root relative squared error             86.7189 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.566    0.146    0.644      0.566    0.603      0.436    0.796     0.615     Sick
+                 0.854    0.434    0.809      0.854    0.831      0.436    0.796     0.864     Healthy
+Weighted Avg.    0.762    0.342    0.756      0.762    0.758      0.436    0.796     0.785     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  47  36 |   a = Sick
+  26 152 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         209               80.0766 %
+Incorrectly Classified Instances        52               19.9234 %
+Kappa statistic                          0.519 
+Mean absolute error                      0.298 
+Root mean squared error                  0.374 
+Relative absolute error                 66.0629 %
+Root relative squared error             79.8884 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.602    0.107    0.725      0.602    0.658      0.523    0.855     0.765     Sick
+                 0.893    0.398    0.828      0.893    0.859      0.523    0.855     0.907     Healthy
+Weighted Avg.    0.801    0.305    0.795      0.801    0.795      0.523    0.855     0.862     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  50  33 |   a = Sick
+  19 159 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         199               76.2452 %
+Incorrectly Classified Instances        62               23.7548 %
+Kappa statistic                          0.4342
+Mean absolute error                      0.3125
+Root mean squared error                  0.4059
+Relative absolute error                 69.2946 %
+Root relative squared error             86.7189 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.566    0.146    0.644      0.566    0.603      0.436    0.796     0.615     Sick
+                 0.854    0.434    0.809      0.854    0.831      0.436    0.796     0.864     Healthy
+Weighted Avg.    0.762    0.342    0.756      0.762    0.758      0.436    0.796     0.785     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  47  36 |   a = Sick
+  26 152 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         209               80.0766 %
+Incorrectly Classified Instances        52               19.9234 %
+Kappa statistic                          0.519 
+Mean absolute error                      0.298 
+Root mean squared error                  0.374 
+Relative absolute error                 66.0629 %
+Root relative squared error             79.8884 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.602    0.107    0.725      0.602    0.658      0.523    0.855     0.765     Sick
+                 0.893    0.398    0.828      0.893    0.859      0.523    0.855     0.907     Healthy
+Weighted Avg.    0.801    0.305    0.795      0.801    0.795      0.523    0.855     0.862     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  50  33 |   a = Sick
+  19 159 |   b = Healthy
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: DiabetesDiagnosis
+
+
+Correctly Classified Instances         199               76.2452 %
+Incorrectly Classified Instances        62               23.7548 %
+Kappa statistic                          0.4342
+Mean absolute error                      0.3125
+Root mean squared error                  0.4059
+Relative absolute error                 69.2946 %
+Root relative squared error             86.7189 %
+Total Number of Instances              261     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.566    0.146    0.644      0.566    0.603      0.436    0.796     0.615     Sick
+                 0.854    0.434    0.809      0.854    0.831      0.436    0.796     0.864     Healthy
+Weighted Avg.    0.762    0.342    0.756      0.762    0.758      0.436    0.796     0.785     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  47  36 |   a = Sick
+  26 152 |   b = Healthy
